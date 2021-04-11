@@ -1429,12 +1429,12 @@ function chocoInstall( $pk )
 }
 $global:chocoList = & choco list -localonly 
 
-chocoInstall vcredist-all
+#chocoInstall vcredist-all
 chocoInstall 7zip.install
-chocoInstall greenshot
+#chocoInstall greenshot
 chocoInstall vlc
-chocoInstall sysinternals
-chocoInstall keepass.install
+#chocoInstall sysinternals
+#chocoInstall keepass.install
 
 #linkshellextension,veracrypt
 
@@ -1451,8 +1451,8 @@ if( [System.IO.File]::Exists($AutoHardenLog+".7z") ){
 # SIG # Begin signature block
 # MIINoAYJKoZIhvcNAQcCoIINkTCCDY0CAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQU5f3VZPf1H6ewdw6mrhhBLc6W
-# 4+egggo9MIIFGTCCAwGgAwIBAgIQobvWmnCC3YBAuYu4RT1skTANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUBzyTbj3mIjWW9gKQtHwmKW+6
+# Ruigggo9MIIFGTCCAwGgAwIBAgIQobvWmnCC3YBAuYu4RT1skTANBgkqhkiG9w0B
 # AQ0FADAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBMB4XDTIxMDQxMTA4MjUxMFoX
 # DTM5MTIzMTIzNTk1OVowFTETMBEGA1UEAxMKQXV0b0hhcmRlbjCCAiIwDQYJKoZI
 # hvcNAQEBBQADggIPADCCAgoCggIBAM5nLYR2Ew4oDqcFdR28IbrdUcIvbv/DL0ax
@@ -1510,16 +1510,16 @@ if( [System.IO.File]::Exists($AutoHardenLog+".7z") ){
 # MBgxFjAUBgNVBAMTDUF1dG9IYXJkZW4tQ0ECEKG71ppwgt2AQLmLuEU9bJEwCQYF
 # Kw4DAhoFAKB4MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkD
 # MQwGCisGAQQBgjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJ
-# KoZIhvcNAQkEMRYEFEIjDGiRjbe4d9rwjmyfbcEujG0aMA0GCSqGSIb3DQEBAQUA
-# BIICAGTDUdNB1MPWPQZhRF0H+V3PJRWxUrMei9c01WvPuUSP+jViba2k7WqjRsjc
-# 0dlr1vRPqrExRupxIpjrWmHbd86+23Zw/4unw5qiseSMJIxVRTUmSRXBIih7Q1HY
-# H9pMivLfanYvSKjmr+Yb78NPn6RfCED9d8zDRJo5+u/Y/H4DpBu5vnfO9pxTvssb
-# Kp46jW7bELVl6w+GHjgKsGmtrPahnaeF6a+f1bNZwPo50R/TMysRj2R4e5YgEcDH
-# WOTHXFCivM70ej1jgcy2yz1yq9eLKvkkJPFO7cDG3Sq0Lx0/s2Fe1GauYJSXq2l/
-# f9mtheZDkRRYznoTI7mwPbv+qIBGHgQnLubbQBaFjKqZM5tHmSTk8F4rBHS/vv5W
-# Fdem2YKhoY9cCy+Ov12NfG0gAsPShvOeN5qb/nkJ19H4g1lTG+OKqyvJLcTclydW
-# mt5KCucW7rNtI2DYrStoBJer6Kfn2YCnYbohaWBUIUEHZfsPfGyjyE2ew61SyaFV
-# zIMpwptIw2jGeUoUZU/maoZ7lLU1ThIhmysgwfP9BdRFLy9flSE4h2SxSgiinp0L
-# SVsI0Omfr7KXNKEDgx1eBXGuaJR676XL/Ku195m0D3YNVGNwif0rLxR1bbag8+Ba
-# IPP9f7JetR1a/BrXAb1MF5/7MDTbLGLga3RbOiAtw30ZFKk1
+# KoZIhvcNAQkEMRYEFHJyrI0eOYyOgw3+u8DCnzM6AljlMA0GCSqGSIb3DQEBAQUA
+# BIICAFAnBYeMgobt6ELJt6Y6W3VKQxJBmRQSG2KzWwFkcOPU0xFP9llbmgRTHUXH
+# kodZQ/oNzn4WYK4TpZuJrK9EmWDmXPlEDN3wiawRSiPinKFS9jKh1B8YyrwzC1gQ
+# /g9zFmOSiWnnbh+VHUFNJUmW6ZSEiXW3ROCOsc+vpy4p4eSsl+AG5jkEvEbGsPI2
+# SpdzumLFLNYmTzzSh1vXTnKvjt+2Yb9m25NIXB5wz90iy/3x5xCEk7ugi2cXsHSt
+# kdR0iECnnvi8dxu7S2mhdWQPqKEHdPXn4xwRS7FVFiGm2jYtOBmV+2rnNwQg/Z1E
+# RBWhXRzRSRV1B1LVv6BlT1rOVieJ3TsfFH1YbHUOFYz+Kp1Ksc5KAeDPFcvG6osN
+# sVzxPA+nDq6pljEJj9Sv62s9m7vzhurryFThRGkH1gcPbe2ikjuJF+Ty2BLoSoQS
+# pblwHatysCzwM+UskecF6EyrDWw/6ijbqsqZK0kpa1mxoo3mTXFd2BBOEXiJvT1N
+# FdhulKMepJ0geejDyV5LfkPisQKo0joVAZuIFiC2Yjui204/2f7kRA7hrWQyRmuu
+# 11C3VltdAPLdlqhzfbl+XuMSFP7Cul6ZGfeR/2IACUNTj1BckJ65ZmTwWkttomhm
+# zfl7UHMCbiDf2YDhQbI/1xZiX5TYUJVL/zTYyd4jy/ZTtkTl
 # SIG # End signature block
