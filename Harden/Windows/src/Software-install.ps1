@@ -23,12 +23,12 @@ function chocoInstall( $pk )
 }
 $global:chocoList = & choco list -localonly 
 
-chocoInstall vcredist-all
+#chocoInstall vcredist-all
 chocoInstall 7zip.install
-chocoInstall greenshot
+#chocoInstall greenshot
 chocoInstall vlc
-chocoInstall sysinternals
-chocoInstall keepass.install
+#chocoInstall sysinternals
+#chocoInstall keepass.install
 
 #linkshellextension,veracrypt
 
