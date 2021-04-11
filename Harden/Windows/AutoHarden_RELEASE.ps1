@@ -17,8 +17,8 @@
 # along with this program; see the file COPYING. If not, write to the
 # Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
-# Update: 2021-04-09
-$AutoHarden_version="2021-04-09"
+# Update: 2021-04-11
+$AutoHarden_version="2021-04-11"
 $global:AutoHarden_boradcastMsg=$true
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
@@ -59,10 +59,10 @@ echo "# Install AutoHarden Cert"
 echo "####################################################################################################"
 if( ask "Auto update AutoHarden and execute AutoHarden every day at 08h00 AM" "0-AutoUpdate.ask" ){
 	$AutoHardenCert = "${env:temp}\"+[System.IO.Path]::GetRandomFileName()+".cer"
-	[IO.File]::WriteAllBytes($AutoHardenCert, [Convert]::FromBase64String("MIIFGTCCAwGgAwIBAgIQlPiyIshB45hFPPzNKE4fTjANBgkqhkiG9w0BAQ0FADAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBMB4XDTE5MTAyOTIxNTUxNVoXDTM5MTIzMTIzNTk1OVowFTETMBEGA1UEAxMKQXV0b0hhcmRlbjCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBALrMv49xZXZjF92Xi3cWVFQrkIF+yYNdU3GSl1NergVq/3WmT8LDpaZ0XSpExZ7soHR3gs8eztnfe07r+Fl+W7l6lz3wUGFt52VY17WCa53tr5dYRPzYt2J6TWT874tqZqlo+lUl8ONK1roAww2flcDajm8VUXM0k0sLM17H9NLykO3DeBuh2PVaXUxGDej+N8PsYF3/7Gv2AW0ZHGflrondcXb2/eh8xwbwRENsGaMXvnGr9RWkufC6bKq31J8BBnP+/65M6541AueBoH8pLbANPZgHKES+8V9UWlYKOeSoeBhtL1k3Rr8tfizRWx1zg/pBNL0WTOLcusmuJkdHkdHbHaW6Jc/vh06Cs6xqz9/Dkg+K3BvOmfwZfAjl+qdgzM8dUU8/GWhswngwLAz64nZ82mZv/Iw6egC0rj5MYV0tpEjIgtVVgHavUfyXoIETNXFQR4SoK6PfeVkEzbRh03xhU65MSgBgWVv1YbOtdgXK0MmCs3ngVPJdVaqBjgcrK++X3Kxasb/bOkcfQjff/EK+BPb/xs+pXEqryYbtbeX0v2rbV9cugPUj+mneucZBLFjuRcXhzVbXLrwXVne7yTD/sIKfe7dztzchg19AY6/qkkRkroaKLASpfCAVx2LuCgeFGn//QaEtCpFxMo2dcnW2a+54pkzrCRTRg1N2wBQFAgMBAAGjYjBgMBMGA1UdJQQMMAoGCCsGAQUFBwMDMEkGA1UdAQRCMECAEPp+TbkVy9u5igk2CqcX2OihGjAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBghBrxVMud93NnE/XjEko2+2HMA0GCSqGSIb3DQEBDQUAA4ICAQAQLtHeMr2qJnfhha2x2aCIApPjfHiHT4RNPI2Lq71jEbTpzdDFJQkKq4R3brGcpcnuU9VjUwz/BgKer+SFpkwFwTHyJpEFkbGavNo/ez3bqoehvqlTYDJO/i2mK0fvKmShfne6dZT+ftLpZCP4zngcANlp+kHy7mNRMB+LJv+jPc0kJ2oP4nIsLejyfxMj0lXuTJJRhxeZssdh0tq4MZP5MjSeiE5/AMuKT12uJ6klNUFS+OlEpZyHkIpgy4HxflXSvhchJ9U1YXF2IQ47WOrqwCXPUinHKZ8LwB0b0/35IlRCpub5KdRf803+4Okf9fL4rfc1cg9ZbLxuK9neFg1+ESL4aPyoV03TbN7Cdsd/sfx4mJ8jXJD+AXZ1ZofAAapYf9J5C71ChCZlhIGBvVc+dTUCWcUYgNOD9Nw+NiV6mARmVHl9SFL7yEtNYFgo0nWiNklqMqBLDxmrrD27sgBpFUwbMZ52truQwaaSHD7hFb4Tb1B0JVaGoog3QfNOXaFeez/fAt5L+yo78cDm7Q2tXvy2g0xDAL/TXn7bhtDzQunltBzdULrJEQO4zI0h8YgmF88a0zYZ9HRkDUn6dR9+G8TlZuUsWSOdvLdEvad9RqiHKeSrL6qgLBT5kqVt6AFsEtmFNz1s7xpsw/zPZvIXtQTmb4h+GcE/b2sUFZUkRA=="))
+	[IO.File]::WriteAllBytes($AutoHardenCert, [Convert]::FromBase64String("MIIFGTCCAwGgAwIBAgIQobvWmnCC3YBAuYu4RT1skTANBgkqhkiG9w0BAQ0FADAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBMB4XDTIxMDQxMTA4MjUxMFoXDTM5MTIzMTIzNTk1OVowFTETMBEGA1UEAxMKQXV0b0hhcmRlbjCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAM5nLYR2Ew4oDqcFdR28IbrdUcIvbv/DL0axHD+8t27lVLfuQypSyuize0CdpkV3LlwPwvAf5jPE6ohF/bGiXWAbSk4azdIQmdC/MVUzxPFLT+yr32hiSLVs2nVm1HR30/vZeFdlllxuMaZvTfhZqVf4gJ5zYMUCRPG93HgW4oW6d137p982SadkdFaN6pOhLiUNH1gAPdbeRMngTnt5PzUFCyjx6n+mQ3sPNjMu4/FXfYAb2DIP/eAeiktOXZPwcSAbE35YV6vptT9AdhRu/44NcXOT9ftgq+MV1Aw4m6JWn2Z6aA7do2zHbW97HNCt0PUfreiKcUCb/nDqoN/0Uk9NdvjcplLb6ccuLN05YYF9uOmLT82XDaG8utGntH6X7V0Ldg5VQ7Pg3yFA3ahcRddcf525KQ+mJEdSgpYnWQ5+j++UUhVo2YijRmRWNkFSGgV9rCItGSiwBM5jhcVXq0A/Pul7g9Rij7eBOap1GFzSXzy9dLzRwC1zDMEh4Z1GoWA0vhb4NOa0/ISG7KZXUWq2MpXD2dMiakQTqmVnbMsCFN3/CbbPZt4GQfnfjo3y85eeBDcdXPStZoGtSjBbq0GKrHao1b8e98R1mVzsBOOtrppSdHzjMWcpJr+H1Q2SBYCeF5AjH1sJ9b7wHmJghujyBQ87sG3Le1grKXLy1jExAgMBAAGjYjBgMBMGA1UdJQQMMAoGCCsGAQUFBwMDMEkGA1UdAQRCMECAEOYDPlhk+/8GHZ4Uje3mOiehGjAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBghD1NmqDy5ZuqE1inZr6g+JZMA0GCSqGSIb3DQEBDQUAA4ICAQBwStpDuIjnwHNcXCnkx4MYdYoOiDYiS62YhuVAfb1n1iDTzUF0v2s3pC0btVER8NuLdZmf9lk83VLqKV3PtXAELK3a4liMB5ODSpYdBrSLZjW393zyRC0GBu4DUQMVvFmkkKDFLjvxo3Y665nv1bW5GG/TP/BbSOFxGnRjGz+8citQ7uF68Db33rf6VBEuKBTRFpS6ck5yAAlqvi/j0VZjb4jLspsD5egY2t4U0UmQetUXnw6gGM9QhwwACElMeQKtc6+EwY8Nk+aq4EIt5lReG8Yjz/TY7/AYZHfQJPzYoOBSuAFfkFoFOkXvW9STAcQrt9uJLJg7YavKRTIVZMCgMk/Cir72LDyVHZU2WHUCHFURfqNT7Rv+4gsnEhpGeuDT0emwZK5eQswfp3/6VEOzTcZ5TIypTeftmg1Xl8Raz6+LWGOc4RaFRCr9k7rk7+w4IAiGRxbeBZ+2aH+/PYoyEWXb0loKsglZQ0muTEUiRCXTFth4kZ0xzp1BSs32owYs+LF8TmvuGdQvRENsw4Wzp5jjs9XMh87Gq52aj5lo2UuWExXDrPwcD8nZ819bdUufHmPZV7fF1kayuXthj1EsUbGcQwurIdD2xPtG1XylIdL2oE4Ae2jxITqECb259bC4h7o8K90qHZp1DStb6/bR/k/BMqVYkFEyxCmu7NteMw=="))
 	Import-Certificate -Filepath $AutoHardenCert -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
 	$AutoHardenCertCA = "${env:temp}\"+[System.IO.Path]::GetRandomFileName()+".cer"
-	[IO.File]::WriteAllBytes($AutoHardenCertCA, [Convert]::FromBase64String("MIIFHDCCAwSgAwIBAgIQa8VTLnfdzZxP14xJKNvthzANBgkqhkiG9w0BAQ0FADAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBMB4XDTE5MTAyOTIxNTUwOVoXDTM5MTIzMTIzNTk1OVowGDEWMBQGA1UEAxMNQXV0b0hhcmRlbi1DQTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANlm8tv2IqVairIP90RnIsNlQYPMAvUwRcC6Nw+0Qlv56tWczvMl9IF0+h2vUF5+lnSEkJMGBqeLFaJgSo9lNyHeTfjjqpEcMVBw1nXl6VSfNiirD7fJTkyZ3rl63PsOwbfWCPDW1AvLufYhBiijPlK1k4RJFkiFZbZkpe5ys0uY4QVFj+ZTaW0EA0MncX2YZ775QnX7HJO0HfMcHGGTxOPhAqJ7Pp+IBrs75laaASekJSTVub7jqs5aeApQkUWgKel1fmK0tBv35deE1P5ABXi+KnuzWCZDU8znIDAnj1qz+6c21KKhslEdzYlRSlq4kPcF964GECxRtgq0z1pzhV/WvBJjWjNp3G5e8jUfjuAg2utF/xd/j7GNU8vllDAXFjl4czc1saGZDcU8a/uaweKMjqR4WfyUp/H/mB7JFJlOHBGTRszWaAU/4E0V+bICXNI5augkV29ci0HouBG3WFcQiA5q+1U2vY/scVyMPm8ZecCe2b+SD/ipPtFspcOPStRm5EQgL4CWdVpSmm8+JRO0NcrSnQtNPCwPBT3c7OLOwYLBl8WHcJG1yOJtQvLjv1koMmJkHR0djODx8Ig9fqAFLH0c694E6VJbojDVGp/LRR9LnJnzYlWAYoT3ScPQ9uesgr4x8VSnrM6cMG3ASQD92RVXKCDep/Rq29IXtvjpAgMBAAGjYjBgMBMGA1UdJQQMMAoGCCsGAQUFBwMDMEkGA1UdAQRCMECAEPp+TbkVy9u5igk2CqcX2OihGjAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBghBrxVMud93NnE/XjEko2+2HMA0GCSqGSIb3DQEBDQUAA4ICAQDBiDwoVi2YhWzlMUTE5JHUUUkGkTaMVKfjYBFiUHeQQIaUuSq3dMRPlfpDRSzt3TW5mfwcPdwwatE0xeGN3r3zyQgnzEG/vMVrxwkgfFekVYvE4Ja551MSkwAA2fuTHGsRB9tEbTrkbGr35bXZYxOpGHpZIifFETFCT6rOpheDdxOEU6YyLeIYgGdGCmKStJ3XSkvqBh7oQ45M0+iqX9yjJNGoUg+XMLnk4K++7rxIk/SGtUBuIpsB3ksmIsXImelUxHw3xe6nGkkncAm9yX7rTU1M1fqrxaoBiGvx9jlqxDVMIzzDga7vKXDsP/iUmb4feeTIoy7+SgqGWsSvRiLt6A5CeIQ5XaTrhWN+mbGq6vvFTZuctY6LzdufwhlbZXFmfU/LnsRprM2EzYfba8VZmmfMBBpnYrw5q/3d5f9OSmNkRQjs0HfVab9b44hWNUd2QJ6yvjM5gdB367ekVagLpVdb/4mwzKOlspDULSlT7rAeuOc1njylu80pbBFCNiB72AmWNbqEK48ENloUr75NhuTKJ74llj+Nt6g9zDzsXuFICyJILvgE8je87GQXp+712aSGqJBLiGTFjuS3UctJ8qdlf5zkXw6mMB52/M3QYg6vI+2AYRc2EQXRvm8ZSlDKYidp9mZF43EcXFVktnK87x+TKYVjnfTGomfLfAXpTg=="))
+	[IO.File]::WriteAllBytes($AutoHardenCertCA, [Convert]::FromBase64String("MIIFHDCCAwSgAwIBAgIQ9TZqg8uWbqhNYp2a+oPiWTANBgkqhkiG9w0BAQ0FADAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBMB4XDTIxMDQxMTA4MjUwN1oXDTM5MTIzMTIzNTk1OVowGDEWMBQGA1UEAxMNQXV0b0hhcmRlbi1DQTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAM66UuqdsAue5/iEHVTS2z2K8im3eMH0YHtzIF6vzK8aijCR9iHiR8hKm++qi0v0V6egGdoEVUNQF+jmSImBP6ivmMZyJ2kqFu0A/ULRa/bbpH8yNAVPMwP5vAaX35vtOOomYtuG0q5PqyeszfD+uQloebbQeQjDxGSTapRdWcZxLegEz6nQqjmIH93V869fuY+PPUHpgoDwwqql9RdHaS85s5pYosbRlmXidtOkM6Z4RkaSp0rpNpJ24sptqtscWkpIuEvZMunuH1+iwfDB1KzI5cucJnJRQsKw+cU3kOyrefp8ax90uk+2FkUPgbPnfxnFTsKlGQvmlhxp1FWXrK/9V94+nWIMxg04foeksqKH+83nqExSN7wNP+ZJpuOAVBYMUJFpUBSRTyVBoDHtsPkp+vZW2Gog13ymxgaTVohTOd4kXo64LbNwPzxMMPVYzz8DtSOML612Zt8Xl+GfmtMgoCGfTwc2jgTPjbN4E2wS2TSCjt1It375dVskK74izXr2Dfyh/qQwg9W8IWS9VDkeEm5D8WQUVdKSg+8IT1/AqsNiyqDD/sGLZxkF0sLjVuu9HxBJohegr2oQnke9/0vgvNOM0T2VycvBMu2YUTxfM88zX8JtCqmfu4zUJwlihumKax7N4NLVr8fA7KcCjZFSVhmJe7f09L5iSPUki9gpAgMBAAGjYjBgMBMGA1UdJQQMMAoGCCsGAQUFBwMDMEkGA1UdAQRCMECAEOYDPlhk+/8GHZ4Uje3mOiehGjAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBghD1NmqDy5ZuqE1inZr6g+JZMA0GCSqGSIb3DQEBDQUAA4ICAQBNm4OTsxzQah3e2N5OPH2Jlyo+ruXPtZhVHJownr2+PpxVotnvNr2iCigPDOFgxwO1RDbVP3o105vNIb9c/v7NLzozulzy5ct5YnLvtX9JLZmVA2pJeYw90ZLX1qCm6p0C8RGwknzqbc/+pMLKLETOesbu6soom2GINA+dAvUJukpinTvgriTkkj9C2ayBH0lgqohLH/VoC6hIje61gW4NcuMz2dtjqki3d+4NPQCphueM1QN1EYus4HiY8bepJvqdUSy4IksoI0pTuu6G4Nv9vRMh5vwO9hfkOis7/tIphg/hIGdhP/TQZl3y5xWn/2w4MqxXMS8O+OdyRaa3OtLqe8i32W6rQjLrkJ3SM+BvIDz1ydobYKR9IljR1cDjifcUQ35je8jiimSol6eskjlGA6Z5ueHSHoiPDEX88A3Vee8C1Lh530HWZDvBD9/JrzeVnCqSUQSkwie42hoSP7g1Poiqw2wfcSoILW2C7YJimBehnqwtTbKRzb/AoE6Us16HwMxAFSgGy4H0cTCRy922biEZ3berSGNdOz+mHZdWbmOGpTwZLwjXYp2FTFvo8f/jpIx4qhVqHhfF1iglcl5bYE7xaiMa/M6pB0megbQaeqjUdG9ANECcMtSylmAwrQk3W/GgAFZR4BnOtB25J/UaLhF9ceRrvOz2TEDjw5tWyw=="))
 	Import-Certificate -Filepath $AutoHardenCertCA -CertStoreLocation Cert:\LocalMachine\AuthRoot
 }
 
@@ -80,7 +80,7 @@ $Setting = New-ScheduledTaskSettingsSet -RestartOnIdle -StartWhenAvailable -Exec
 Register-ScheduledTask -TaskName "AutoHarden" -Trigger $Trigger -User "NT AUTHORITY\SYSTEM" -Action $Action -RunLevel Highest -Settings $Setting -Force
 if( ask "Auto update AutoHarden every day at 08h00 AM" "0-AutoUpdateFromWeb.ask" ){
 	Get-NetFirewallRule -Name '*AutoHarden*Powershell*' | Disable-NetFirewallRule
-	Invoke-WebRequest -Uri https://raw.githubusercontent.com/1mm0rt41PC/HowTo/master/Harden/Windows/AutoHarden_RELEASE.ps1 -OutFile C:\Windows\AutoHarden\AutoHarden_temp.ps1
+	Invoke-WebRequest -Uri https://raw.githubusercontent.com/c3dcmps/HowTo/master/Harden/Windows/AutoHarden_RELEASE.ps1 -OutFile C:\Windows\AutoHarden\AutoHarden_temp.ps1
 	Get-NetFirewallRule -Name '*AutoHarden*Powershell*' | Enable-NetFirewallRule
 	if( (Get-AuthenticodeSignature C:\Windows\AutoHarden\AutoHarden_temp.ps1).Status -eq [System.Management.Automation.SignatureStatus]::Valid ){
 		Write-Host "[*] The downloaded PS1 has a valid signature !"
@@ -1312,16 +1312,6 @@ Write-Progress -Activity AutoHarden -Status "Optimiz-DisableDefender" -Completed
 
 
 echo "####################################################################################################"
-echo "# Optimiz-DisableReservedStorageState"
-echo "####################################################################################################"
-Write-Progress -Activity AutoHarden -Status "Optimiz-DisableReservedStorageState" -PercentComplete 0
-Write-Host -BackgroundColor Blue -ForegroundColor White "Running Optimiz-DisableReservedStorageState"
-# From: https://www.windowslatest.com/2020/03/15/windows-10-will-finally-allow-you-to-reclaim-reserved-storage/#:~:text=If%20you%20clean%20install%20Windows,for%20your%20additional%20system%20files
-DISM.exe /Online /Set-ReservedStorageState /State:Disabled
-Write-Progress -Activity AutoHarden -Status "Optimiz-DisableReservedStorageState" -Completed
-
-
-echo "####################################################################################################"
 echo "# Software-install-notepad++"
 echo "####################################################################################################"
 Write-Progress -Activity AutoHarden -Status "Software-install-notepad++" -PercentComplete 0
@@ -1461,75 +1451,75 @@ if( [System.IO.File]::Exists($AutoHardenLog+".7z") ){
 # SIG # Begin signature block
 # MIINoAYJKoZIhvcNAQcCoIINkTCCDY0CAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUTp4xY+5dUNtN7CQIGXmMgWwQ
-# XwWgggo9MIIFGTCCAwGgAwIBAgIQlPiyIshB45hFPPzNKE4fTjANBgkqhkiG9w0B
-# AQ0FADAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBMB4XDTE5MTAyOTIxNTUxNVoX
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQU5f3VZPf1H6ewdw6mrhhBLc6W
+# 4+egggo9MIIFGTCCAwGgAwIBAgIQobvWmnCC3YBAuYu4RT1skTANBgkqhkiG9w0B
+# AQ0FADAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBMB4XDTIxMDQxMTA4MjUxMFoX
 # DTM5MTIzMTIzNTk1OVowFTETMBEGA1UEAxMKQXV0b0hhcmRlbjCCAiIwDQYJKoZI
-# hvcNAQEBBQADggIPADCCAgoCggIBALrMv49xZXZjF92Xi3cWVFQrkIF+yYNdU3GS
-# l1NergVq/3WmT8LDpaZ0XSpExZ7soHR3gs8eztnfe07r+Fl+W7l6lz3wUGFt52VY
-# 17WCa53tr5dYRPzYt2J6TWT874tqZqlo+lUl8ONK1roAww2flcDajm8VUXM0k0sL
-# M17H9NLykO3DeBuh2PVaXUxGDej+N8PsYF3/7Gv2AW0ZHGflrondcXb2/eh8xwbw
-# RENsGaMXvnGr9RWkufC6bKq31J8BBnP+/65M6541AueBoH8pLbANPZgHKES+8V9U
-# WlYKOeSoeBhtL1k3Rr8tfizRWx1zg/pBNL0WTOLcusmuJkdHkdHbHaW6Jc/vh06C
-# s6xqz9/Dkg+K3BvOmfwZfAjl+qdgzM8dUU8/GWhswngwLAz64nZ82mZv/Iw6egC0
-# rj5MYV0tpEjIgtVVgHavUfyXoIETNXFQR4SoK6PfeVkEzbRh03xhU65MSgBgWVv1
-# YbOtdgXK0MmCs3ngVPJdVaqBjgcrK++X3Kxasb/bOkcfQjff/EK+BPb/xs+pXEqr
-# yYbtbeX0v2rbV9cugPUj+mneucZBLFjuRcXhzVbXLrwXVne7yTD/sIKfe7dztzch
-# g19AY6/qkkRkroaKLASpfCAVx2LuCgeFGn//QaEtCpFxMo2dcnW2a+54pkzrCRTR
-# g1N2wBQFAgMBAAGjYjBgMBMGA1UdJQQMMAoGCCsGAQUFBwMDMEkGA1UdAQRCMECA
-# EPp+TbkVy9u5igk2CqcX2OihGjAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBghBr
-# xVMud93NnE/XjEko2+2HMA0GCSqGSIb3DQEBDQUAA4ICAQAQLtHeMr2qJnfhha2x
-# 2aCIApPjfHiHT4RNPI2Lq71jEbTpzdDFJQkKq4R3brGcpcnuU9VjUwz/BgKer+SF
-# pkwFwTHyJpEFkbGavNo/ez3bqoehvqlTYDJO/i2mK0fvKmShfne6dZT+ftLpZCP4
-# zngcANlp+kHy7mNRMB+LJv+jPc0kJ2oP4nIsLejyfxMj0lXuTJJRhxeZssdh0tq4
-# MZP5MjSeiE5/AMuKT12uJ6klNUFS+OlEpZyHkIpgy4HxflXSvhchJ9U1YXF2IQ47
-# WOrqwCXPUinHKZ8LwB0b0/35IlRCpub5KdRf803+4Okf9fL4rfc1cg9ZbLxuK9ne
-# Fg1+ESL4aPyoV03TbN7Cdsd/sfx4mJ8jXJD+AXZ1ZofAAapYf9J5C71ChCZlhIGB
-# vVc+dTUCWcUYgNOD9Nw+NiV6mARmVHl9SFL7yEtNYFgo0nWiNklqMqBLDxmrrD27
-# sgBpFUwbMZ52truQwaaSHD7hFb4Tb1B0JVaGoog3QfNOXaFeez/fAt5L+yo78cDm
-# 7Q2tXvy2g0xDAL/TXn7bhtDzQunltBzdULrJEQO4zI0h8YgmF88a0zYZ9HRkDUn6
-# dR9+G8TlZuUsWSOdvLdEvad9RqiHKeSrL6qgLBT5kqVt6AFsEtmFNz1s7xpsw/zP
-# ZvIXtQTmb4h+GcE/b2sUFZUkRDCCBRwwggMEoAMCAQICEGvFUy533c2cT9eMSSjb
-# 7YcwDQYJKoZIhvcNAQENBQAwGDEWMBQGA1UEAxMNQXV0b0hhcmRlbi1DQTAeFw0x
-# OTEwMjkyMTU1MDlaFw0zOTEyMzEyMzU5NTlaMBgxFjAUBgNVBAMTDUF1dG9IYXJk
-# ZW4tQ0EwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDZZvLb9iKlWoqy
-# D/dEZyLDZUGDzAL1MEXAujcPtEJb+erVnM7zJfSBdPodr1BefpZ0hJCTBganixWi
-# YEqPZTch3k3446qRHDFQcNZ15elUnzYoqw+3yU5Mmd65etz7DsG31gjw1tQLy7n2
-# IQYooz5StZOESRZIhWW2ZKXucrNLmOEFRY/mU2ltBANDJ3F9mGe++UJ1+xyTtB3z
-# HBxhk8Tj4QKiez6fiAa7O+ZWmgEnpCUk1bm+46rOWngKUJFFoCnpdX5itLQb9+XX
-# hNT+QAV4vip7s1gmQ1PM5yAwJ49as/unNtSiobJRHc2JUUpauJD3BfeuBhAsUbYK
-# tM9ac4Vf1rwSY1ozadxuXvI1H47gINrrRf8Xf4+xjVPL5ZQwFxY5eHM3NbGhmQ3F
-# PGv7msHijI6keFn8lKfx/5geyRSZThwRk0bM1mgFP+BNFfmyAlzSOWroJFdvXItB
-# 6LgRt1hXEIgOavtVNr2P7HFcjD5vGXnAntm/kg/4qT7RbKXDj0rUZuREIC+AlnVa
-# UppvPiUTtDXK0p0LTTwsDwU93OzizsGCwZfFh3CRtcjibULy479ZKDJiZB0dHYzg
-# 8fCIPX6gBSx9HOveBOlSW6Iw1Rqfy0UfS5yZ82JVgGKE90nD0PbnrIK+MfFUp6zO
-# nDBtwEkA/dkVVygg3qf0atvSF7b46QIDAQABo2IwYDATBgNVHSUEDDAKBggrBgEF
-# BQcDAzBJBgNVHQEEQjBAgBD6fk25FcvbuYoJNgqnF9jooRowGDEWMBQGA1UEAxMN
-# QXV0b0hhcmRlbi1DQYIQa8VTLnfdzZxP14xJKNvthzANBgkqhkiG9w0BAQ0FAAOC
-# AgEAwYg8KFYtmIVs5TFExOSR1FFJBpE2jFSn42ARYlB3kECGlLkqt3TET5X6Q0Us
-# 7d01uZn8HD3cMGrRNMXhjd6988kIJ8xBv7zFa8cJIHxXpFWLxOCWuedTEpMAANn7
-# kxxrEQfbRG065Gxq9+W12WMTqRh6WSInxRExQk+qzqYXg3cThFOmMi3iGIBnRgpi
-# krSd10pL6gYe6EOOTNPoql/coyTRqFIPlzC55OCvvu68SJP0hrVAbiKbAd5LJiLF
-# yJnpVMR8N8XupxpJJ3AJvcl+601NTNX6q8WqAYhr8fY5asQ1TCM8w4Gu7ylw7D/4
-# lJm+H3nkyKMu/koKhlrEr0Yi7egOQniEOV2k64Vjfpmxqur7xU2bnLWOi83bn8IZ
-# W2VxZn1Py57EaazNhM2H22vFWZpnzAQaZ2K8Oav93eX/TkpjZEUI7NB31Wm/W+OI
-# VjVHdkCesr4zOYHQd+u3pFWoC6VXW/+JsMyjpbKQ1C0pU+6wHrjnNZ48pbvNKWwR
-# QjYge9gJljW6hCuPBDZaFK++TYbkyie+JZY/jbeoPcw87F7hSAsiSC74BPI3vOxk
-# F6fu9dmkhqiQS4hkxY7kt1HLSfKnZX+c5F8OpjAedvzN0GIOryPtgGEXNhEF0b5v
-# GUpQymInafZmReNxHFxVZLZyvO8fkymFY530xqJny3wF6U4xggLNMIICyQIBATAs
-# MBgxFjAUBgNVBAMTDUF1dG9IYXJkZW4tQ0ECEJT4siLIQeOYRTz8zShOH04wCQYF
+# hvcNAQEBBQADggIPADCCAgoCggIBAM5nLYR2Ew4oDqcFdR28IbrdUcIvbv/DL0ax
+# HD+8t27lVLfuQypSyuize0CdpkV3LlwPwvAf5jPE6ohF/bGiXWAbSk4azdIQmdC/
+# MVUzxPFLT+yr32hiSLVs2nVm1HR30/vZeFdlllxuMaZvTfhZqVf4gJ5zYMUCRPG9
+# 3HgW4oW6d137p982SadkdFaN6pOhLiUNH1gAPdbeRMngTnt5PzUFCyjx6n+mQ3sP
+# NjMu4/FXfYAb2DIP/eAeiktOXZPwcSAbE35YV6vptT9AdhRu/44NcXOT9ftgq+MV
+# 1Aw4m6JWn2Z6aA7do2zHbW97HNCt0PUfreiKcUCb/nDqoN/0Uk9NdvjcplLb6ccu
+# LN05YYF9uOmLT82XDaG8utGntH6X7V0Ldg5VQ7Pg3yFA3ahcRddcf525KQ+mJEdS
+# gpYnWQ5+j++UUhVo2YijRmRWNkFSGgV9rCItGSiwBM5jhcVXq0A/Pul7g9Rij7eB
+# Oap1GFzSXzy9dLzRwC1zDMEh4Z1GoWA0vhb4NOa0/ISG7KZXUWq2MpXD2dMiakQT
+# qmVnbMsCFN3/CbbPZt4GQfnfjo3y85eeBDcdXPStZoGtSjBbq0GKrHao1b8e98R1
+# mVzsBOOtrppSdHzjMWcpJr+H1Q2SBYCeF5AjH1sJ9b7wHmJghujyBQ87sG3Le1gr
+# KXLy1jExAgMBAAGjYjBgMBMGA1UdJQQMMAoGCCsGAQUFBwMDMEkGA1UdAQRCMECA
+# EOYDPlhk+/8GHZ4Uje3mOiehGjAYMRYwFAYDVQQDEw1BdXRvSGFyZGVuLUNBghD1
+# NmqDy5ZuqE1inZr6g+JZMA0GCSqGSIb3DQEBDQUAA4ICAQBwStpDuIjnwHNcXCnk
+# x4MYdYoOiDYiS62YhuVAfb1n1iDTzUF0v2s3pC0btVER8NuLdZmf9lk83VLqKV3P
+# tXAELK3a4liMB5ODSpYdBrSLZjW393zyRC0GBu4DUQMVvFmkkKDFLjvxo3Y665nv
+# 1bW5GG/TP/BbSOFxGnRjGz+8citQ7uF68Db33rf6VBEuKBTRFpS6ck5yAAlqvi/j
+# 0VZjb4jLspsD5egY2t4U0UmQetUXnw6gGM9QhwwACElMeQKtc6+EwY8Nk+aq4EIt
+# 5lReG8Yjz/TY7/AYZHfQJPzYoOBSuAFfkFoFOkXvW9STAcQrt9uJLJg7YavKRTIV
+# ZMCgMk/Cir72LDyVHZU2WHUCHFURfqNT7Rv+4gsnEhpGeuDT0emwZK5eQswfp3/6
+# VEOzTcZ5TIypTeftmg1Xl8Raz6+LWGOc4RaFRCr9k7rk7+w4IAiGRxbeBZ+2aH+/
+# PYoyEWXb0loKsglZQ0muTEUiRCXTFth4kZ0xzp1BSs32owYs+LF8TmvuGdQvRENs
+# w4Wzp5jjs9XMh87Gq52aj5lo2UuWExXDrPwcD8nZ819bdUufHmPZV7fF1kayuXth
+# j1EsUbGcQwurIdD2xPtG1XylIdL2oE4Ae2jxITqECb259bC4h7o8K90qHZp1DStb
+# 6/bR/k/BMqVYkFEyxCmu7NteMzCCBRwwggMEoAMCAQICEPU2aoPLlm6oTWKdmvqD
+# 4lkwDQYJKoZIhvcNAQENBQAwGDEWMBQGA1UEAxMNQXV0b0hhcmRlbi1DQTAeFw0y
+# MTA0MTEwODI1MDdaFw0zOTEyMzEyMzU5NTlaMBgxFjAUBgNVBAMTDUF1dG9IYXJk
+# ZW4tQ0EwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDOulLqnbALnuf4
+# hB1U0ts9ivIpt3jB9GB7cyBer8yvGoowkfYh4kfISpvvqotL9FenoBnaBFVDUBfo
+# 5kiJgT+or5jGcidpKhbtAP1C0Wv226R/MjQFTzMD+bwGl9+b7TjqJmLbhtKuT6sn
+# rM3w/rkJaHm20HkIw8Rkk2qUXVnGcS3oBM+p0Ko5iB/d1fOvX7mPjz1B6YKA8MKq
+# pfUXR2kvObOaWKLG0ZZl4nbTpDOmeEZGkqdK6TaSduLKbarbHFpKSLhL2TLp7h9f
+# osHwwdSsyOXLnCZyUULCsPnFN5Dsq3n6fGsfdLpPthZFD4Gz538ZxU7CpRkL5pYc
+# adRVl6yv/VfePp1iDMYNOH6HpLKih/vN56hMUje8DT/mSabjgFQWDFCRaVAUkU8l
+# QaAx7bD5Kfr2VthqINd8psYGk1aIUzneJF6OuC2zcD88TDD1WM8/A7UjjC+tdmbf
+# F5fhn5rTIKAhn08HNo4Ez42zeBNsEtk0go7dSLd++XVbJCu+Is169g38of6kMIPV
+# vCFkvVQ5HhJuQ/FkFFXSkoPvCE9fwKrDYsqgw/7Bi2cZBdLC41brvR8QSaIXoK9q
+# EJ5Hvf9L4LzTjNE9lcnLwTLtmFE8XzPPM1/CbQqpn7uM1CcJYobpimsezeDS1a/H
+# wOynAo2RUlYZiXu39PS+Ykj1JIvYKQIDAQABo2IwYDATBgNVHSUEDDAKBggrBgEF
+# BQcDAzBJBgNVHQEEQjBAgBDmAz5YZPv/Bh2eFI3t5jonoRowGDEWMBQGA1UEAxMN
+# QXV0b0hhcmRlbi1DQYIQ9TZqg8uWbqhNYp2a+oPiWTANBgkqhkiG9w0BAQ0FAAOC
+# AgEATZuDk7Mc0God3tjeTjx9iZcqPq7lz7WYVRyaMJ69vj6cVaLZ7za9ogooDwzh
+# YMcDtUQ21T96NdObzSG/XP7+zS86M7pc8uXLeWJy77V/SS2ZlQNqSXmMPdGS19ag
+# puqdAvERsJJ86m3P/qTCyixEznrG7urKKJthiDQPnQL1CbpKYp074K4k5JI/Qtms
+# gR9JYKqISx/1aAuoSI3utYFuDXLjM9nbY6pIt3fuDT0AqYbnjNUDdRGLrOB4mPG3
+# qSb6nVEsuCJLKCNKU7ruhuDb/b0TIeb8DvYX5DorO/7SKYYP4SBnYT/00GZd8ucV
+# p/9sODKsVzEvDvjnckWmtzrS6nvIt9luq0Iy65Cd0jPgbyA89cnaG2CkfSJY0dXA
+# 44n3FEN+Y3vI4opkqJenrJI5RgOmebnh0h6IjwxF/PAN1XnvAtS4ed9B1mQ7wQ/f
+# ya83lZwqklEEpMInuNoaEj+4NT6IqsNsH3EqCC1tgu2CYpgXoZ6sLU2ykc2/wKBO
+# lLNeh8DMQBUoBsuB9HEwkcvdtm4hGd23q0hjXTs/ph2XVm5jhqU8GS8I12KdhUxb
+# 6PH/46SMeKoVah4XxdYoJXJeW2BO8WojGvzOqQdJnoG0Gnqo1HRvQDRAnDLUspZg
+# MK0JN1vxoABWUeAZzrQduSf1Gi4RfXHka7zs9kxA48ObVssxggLNMIICyQIBATAs
+# MBgxFjAUBgNVBAMTDUF1dG9IYXJkZW4tQ0ECEKG71ppwgt2AQLmLuEU9bJEwCQYF
 # Kw4DAhoFAKB4MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkD
 # MQwGCisGAQQBgjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJ
-# KoZIhvcNAQkEMRYEFGA6Dq9fNg3psykeFSN0d8cplejaMA0GCSqGSIb3DQEBAQUA
-# BIICAJNMNkypIkCxbwHHSLKnla36l3y5ieiQa0YAsEIC5sM/HqOvp0ZVvpw54tNg
-# r74fdkZ6Zek3/z2pPYu/NsX85T2WjzwY+/CqrYZ9+V2mZX+hDFvbeN3NvAzKgK0g
-# CMm6GVfVU6MHpkHB9WQD1qeXKfYvV7T7HGEQf0EPXyXwcRz4oEeeY+H6OaPU8hFv
-# Dqc6ygz/g6jPfQG5bOPJbuhr05vyw2WDm+3gKo5oDB+xwg1jdoxS+dx8GclAACt3
-# +C+VgZ8FKhtt7jayn6fZJrO+YZNyZ00FShJLAdNeqjyBUaFTUnfCtGRuoydVodFw
-# 8ePe1C9QyoPvcF5x4H1mm/wt+XDc06Wf1qT2ob06QHFxPz6E38EPMe08JGPth7z0
-# +v0PFdz17zzEkM38/2X5pvRRirIbGlsbVG0H9umLaW6eRQMHzSnm98UQ266EUaMD
-# RFHglIfHj/npLzvqeScQgPurHlWVLvqY2/40j+N4tX8GhCYknNJWJBUlVX6Ler03
-# mCFJiI6oPNsfPocBgWzwb5AcUPFsEnKh/rwJ8nMUCrUjk4hyZ+KgJMqrDNzsm+tJ
-# 9V5pfroxmh2cZpd8+zvTZQBQmNCTDhaPk0XcgE3NDAYomrcwlSHYhgt06G2DdViZ
-# QV80BsOMhCMH+QLfXVSM2xayGOxCXRVQY1WQ/6O0hkT7CQGI
+# KoZIhvcNAQkEMRYEFEIjDGiRjbe4d9rwjmyfbcEujG0aMA0GCSqGSIb3DQEBAQUA
+# BIICAGTDUdNB1MPWPQZhRF0H+V3PJRWxUrMei9c01WvPuUSP+jViba2k7WqjRsjc
+# 0dlr1vRPqrExRupxIpjrWmHbd86+23Zw/4unw5qiseSMJIxVRTUmSRXBIih7Q1HY
+# H9pMivLfanYvSKjmr+Yb78NPn6RfCED9d8zDRJo5+u/Y/H4DpBu5vnfO9pxTvssb
+# Kp46jW7bELVl6w+GHjgKsGmtrPahnaeF6a+f1bNZwPo50R/TMysRj2R4e5YgEcDH
+# WOTHXFCivM70ej1jgcy2yz1yq9eLKvkkJPFO7cDG3Sq0Lx0/s2Fe1GauYJSXq2l/
+# f9mtheZDkRRYznoTI7mwPbv+qIBGHgQnLubbQBaFjKqZM5tHmSTk8F4rBHS/vv5W
+# Fdem2YKhoY9cCy+Ov12NfG0gAsPShvOeN5qb/nkJ19H4g1lTG+OKqyvJLcTclydW
+# mt5KCucW7rNtI2DYrStoBJer6Kfn2YCnYbohaWBUIUEHZfsPfGyjyE2ew61SyaFV
+# zIMpwptIw2jGeUoUZU/maoZ7lLU1ThIhmysgwfP9BdRFLy9flSE4h2SxSgiinp0L
+# SVsI0Omfr7KXNKEDgx1eBXGuaJR676XL/Ku195m0D3YNVGNwif0rLxR1bbag8+Ba
+# IPP9f7JetR1a/BrXAb1MF5/7MDTbLGLga3RbOiAtw30ZFKk1
 # SIG # End signature block
